@@ -5,9 +5,11 @@ from datetime import datetime
 
 
 def verify_login(user_email,user_password):
-    user_row = get_rows_by_col(PG_TABLE_IDS_USERS,pg_col_name_dict[PG_TABLE_IDS_USERS][3],user_email)
+    user_row = get_rows_by_col(PG_TABLE_IDS_USERS,pg_col_name_dict[PG_TABLE_IDS_USERS][2],user_email)
     print('user_row :: ',user_row)
     if user_row:
+        print('user_row[0][3] :: ',user_row[0][3])
+        print('user_password :: ',user_password)
         if user_row[0][3] == user_password:
             return True,user_row[0][0]
         else:
