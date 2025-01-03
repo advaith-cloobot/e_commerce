@@ -9,7 +9,28 @@ import { Navigate, useNavigate } from "react-router";
 const Login = () => {
   const [email, setEmail] = useState(''); // Email input state
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
+  function check_login(){
+    const data = {
+      email: email,
+      password: password
+    }
+    httpClient.post('/check_login', data)
+      .then(response => {
+        console.log('response login : ', response);
+        const data = response.data;
+        console.log("\n\ndata login :: ",data);
+        if (data.status) {
+          localStorage.setItem('user_id', data.user_id);
+          // navigate('/payment');
+        }
+        else {
+          console.log('email or password is incorrect', data.error);
+        }
+      })
+      .catch(error => console.error('Error logging in:', error));
+  }
 
   return (
     <div >
@@ -43,7 +64,10 @@ const Login = () => {
           />
         </div>
       </div>
-      </div>
+      <div style={{marginTop: '20px'}}>
+        <button type="button" onClick={check_login}>Login</button>
+    </div>
+    </div>
   );
 };
 export default Login;

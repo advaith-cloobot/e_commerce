@@ -27,8 +27,6 @@ def insert_new_user(user_email,user_password,user_name):
             pg_col_name_dict[PG_TABLE_IDS_USERS][5]: datetime.utcnow(),
             pg_col_name_dict[PG_TABLE_IDS_USERS][6]: 1
         }
-        rowDict[pg_col_name_dict[PG_TABLE_IDS_USERS][3]] = user_email
-        rowDict[pg_col_name_dict[PG_TABLE_IDS_USERS][2]] = user_password
         status,user_id = insert_new_row_return_id(PG_TABLE_IDS_USERS,rowDict,pg_col_name_dict[PG_TABLE_IDS_USERS][0])
         return status,user_id
     else:
