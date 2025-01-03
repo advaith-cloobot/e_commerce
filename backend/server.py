@@ -14,7 +14,7 @@ import traceback
 import datetime
 import traceback
 
-from db_ops import verify_login,insert_new_user
+from db_ops import verify_login,insert_new_user,fetch_questions_list,record_session_end_score,fetch_user_highest_score
 # from constants import *
 from utils import print_statement
 from datetime import datetime
@@ -61,6 +61,37 @@ def sign_up_user():
         print('Exception in sign_up_user ::',e)
         return make_response(jsonify({'error':'Internal error'}), 500)
     
+
+@app.route("/get_questions_list",methods=['POST'])
+def get_questions_list():
+    try:
+        question_list = fetch_questions_list()
+        return {"status":True,"question_list":question_list}
+    except Exception as e:
+        print('Exception in fetch_questions_list ::',e)
+        return make_response(jsonify({'error':'Internal error'}), 500)
+
+@app.route("/finish_session_record_score",methods=['POST'])
+def finish_session_record_score():
+    try:
+        user_id = request.json['user_id']
+        score = request.json['score']
+        consecutive_score = request.json['consecutive_score']
+        record_session_end_score(user_id,score,consecutive_score)
+        return {"status":True}
+    except Exception as e:
+        print('Exception in finish_session_record_score ::',e)
+        return make_response(jsonify({'error':'Internal error'}), 500)
+    
+@app.route("/get_user_highest_score",methods=['POST'])
+def get_user_highest_score():
+    try:
+        user_id = request.json['user_id']
+        score = fetch_user_highest_score(user_id)
+        return {"status":True,"score":score}
+    except Exception as e:
+        print('Exception in fetch_user_highest_score ::',e)
+        return make_response(jsonify({'error':'Internal error'}), 500)
 # @app.route("/get_offer_list",methods=['POST'])
 # def get_offer_list():
 #     try:

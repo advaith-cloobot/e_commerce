@@ -9,8 +9,10 @@ const Menu = () => {
 
 
   return (
-    <div>
-      <p>menu</p>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
+      <button style={{ fontSize: '24px', margin: '10px', padding: '10px 20px' }}>Play</button>
+      <button style={{ fontSize: '24px', margin: '10px', padding: '10px 20px' }}>View Stats</button>
+      <button style={{ fontSize: '24px', margin: '10px', padding: '10px 20px' }}>Logout</button>
     </div>
   );
 }
