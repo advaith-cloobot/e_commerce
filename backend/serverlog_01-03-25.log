@@ -1,0 +1,102 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.30:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:01:51] "[33mOPTIONS /get_question_list HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:01:51] "[33mOPTIONS /get_question_list HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:03:44] "OPTIONS /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:03:44] "OPTIONS /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:03:44] "POST /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:03:44] "POST /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.30:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:04:18] "OPTIONS /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:04:18] "OPTIONS /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:04:18] "POST /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:04:18] "POST /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:04:55] "OPTIONS /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:04:55] "OPTIONS /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:04:55] "POST /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:04:55] "POST /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:09:35] "OPTIONS /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:09:35] "POST /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:10:03] "OPTIONS /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:10:03] "OPTIONS /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:10:03] "POST /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:10:03] "POST /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:17:56] "OPTIONS /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:17:56] "POST /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:18:58] "OPTIONS /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:18:58] "OPTIONS /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:18:58] "POST /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:18:58] "POST /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:21:05] "OPTIONS /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:21:05] "OPTIONS /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:21:05] "POST /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:21:05] "POST /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:24:31] "OPTIONS /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:24:31] "OPTIONS /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:24:31] "POST /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:24:31] "POST /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:37:00] "OPTIONS /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:37:00] "POST /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:37:48] "OPTIONS /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:37:48] "OPTIONS /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:37:48] "POST /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:37:48] "POST /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:38:08] "OPTIONS /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:38:08] "POST /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:40:56] "OPTIONS /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:40:56] "OPTIONS /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:40:56] "POST /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 16:40:56] "POST /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 17:18:03] "OPTIONS /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 17:18:03] "POST /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 17:20:20] "OPTIONS /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 17:20:20] "OPTIONS /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 17:20:20] "POST /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 17:20:20] "POST /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 17:23:37] "OPTIONS /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 17:23:37] "OPTIONS /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 17:23:37] "POST /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 17:23:37] "POST /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 17:24:14] "OPTIONS /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 17:24:14] "OPTIONS /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 17:24:14] "POST /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 17:24:14] "POST /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 17:44:43] "OPTIONS /finish_session_record_score HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 17:44:43] "[35m[1mPOST /finish_session_record_score HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.30:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 17:45:43] "OPTIONS /finish_session_record_score HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 17:45:43] "POST /finish_session_record_score HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.30:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 17:46:55] "OPTIONS /finish_session_record_score HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 17:46:55] "POST /finish_session_record_score HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 17:59:14] "OPTIONS /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 17:59:14] "POST /get_questions_list HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 17:59:31] "OPTIONS /finish_session_record_score HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 17:59:31] "POST /finish_session_record_score HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 18:03:25] "OPTIONS /finish_session_record_score HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 18:03:25] "POST /finish_session_record_score HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 18:03:43] "OPTIONS /finish_session_record_score HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 18:03:43] "POST /finish_session_record_score HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 18:19:21] "OPTIONS /finish_session_record_score HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 18:19:21] "POST /finish_session_record_score HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 18:25:23] "OPTIONS /finish_session_record_score HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 18:25:23] "POST /finish_session_record_score HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 18:26:00] "OPTIONS /finish_session_record_score HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 18:26:00] "POST /finish_session_record_score HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 18:26:34] "OPTIONS /finish_session_record_score HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.30 - - [03/Jan/2025 18:26:34] "POST /finish_session_record_score HTTP/1.1" 200 -

@@ -14,9 +14,9 @@ import traceback
 import datetime
 import traceback
 
-from db_ops import verify_login,insert_new_user,fetch_questions_list,record_session_end_score,fetch_user_highest_score
+from db_ops import verify_login,insert_new_user,fetch_questions_list,record_session_end_score,fetch_user_highest_score,fetch_top_scoring_users,fetch_user_highest_consecutive_score
 # from constants import *
-from utils import print_statement
+from utils import print_statement,find_largest_number
 from datetime import datetime
 app = Flask(__name__,template_folder='assets/html_templates')
 
@@ -76,7 +76,10 @@ def finish_session_record_score():
     try:
         user_id = request.json['user_id']
         score = request.json['score']
-        consecutive_score = request.json['consecutive_score']
+        consecutive_score_list = request.json['consecutive_score_list']
+        consecutive_score = find_largest_number(consecutive_score_list)
+        if not consecutive_score:
+            consecutive_score = 0
         record_session_end_score(user_id,score,consecutive_score)
         return {"status":True}
     except Exception as e:
@@ -88,12 +91,20 @@ def get_user_highest_score():
     try:
         user_id = request.json['user_id']
         score = fetch_user_highest_score(user_id)
-        return {"status":True,"score":score}
+        consecutive_score = fetch_user_highest_consecutive_score(user_id)
+        return {"status":True,"score":score,"consecutive_score":consecutive_score}
     except Exception as e:
         print('Exception in fetch_user_highest_score ::',e)
         return make_response(jsonify({'error':'Internal error'}), 500)
-    
 
+@app.route("/get_top_scoring_users",methods=['POST'])
+def get_top_scoring_users():
+    try:
+        top_users = fetch_top_scoring_users()
+        return {"status":True,"top_users":top_users}
+    except Exception as e:
+        print('Exception in fetch_top_scoring_users ::',e)
+        return make_response(jsonify({'error':'Internal error'}), 500)
 
 # @app.route("/get_offer_list",methods=['POST'])
 # def get_offer_list():
