@@ -15,8 +15,8 @@ const Login = () => {
 
   function check_login(){
     const data = {
-      email: email,
-      password: password
+      user_email: email,
+      user_password: password
     }
     httpClient.post('/check_login', data)
       .then(response => {

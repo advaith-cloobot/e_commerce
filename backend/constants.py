@@ -2,7 +2,7 @@ DB_HOST = "localhost"
 DB_PASS = "add@postgres"
 DB_USER = "postgres"
 DB_PORT = 5432
-DB_NAME = "postgres"
+DB_NAME = "proj_postgres@localhost"
 
 
 pg_col_name_dict = {}
