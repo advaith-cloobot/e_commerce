@@ -16,7 +16,7 @@ import traceback
 
 from db_ops import verify_login,insert_new_user
 # from constants import *
-# from utils import *
+from utils import print_statement
 from datetime import datetime
 app = Flask(__name__,template_folder='assets/html_templates')
 
@@ -38,6 +38,7 @@ ENVIRONMENT = "Server"
 @app.route("/check_login",methods=['POST'])
 def check_login():
     try:
+        print_statement('In check_login :: ',request.json)
         user_email = request.json['user_email']
         user_password = request.json['user_password']
         status,user_id = verify_login(user_email,user_password)
@@ -50,6 +51,7 @@ def check_login():
 @app.route("/sign_up_user",methods=['POST'])
 def sign_up_user():
     try:
+        print_statement('In check_ sign up :: ',request.json)
         user_name = request.json['user_name']
         user_email = request.json['user_email']
         user_password = request.json['user_password']
