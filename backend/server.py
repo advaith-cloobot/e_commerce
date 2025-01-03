@@ -92,6 +92,9 @@ def get_user_highest_score():
     except Exception as e:
         print('Exception in fetch_user_highest_score ::',e)
         return make_response(jsonify({'error':'Internal error'}), 500)
+    
+
+
 # @app.route("/get_offer_list",methods=['POST'])
 # def get_offer_list():
 #     try:
