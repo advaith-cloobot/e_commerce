@@ -25,7 +25,7 @@ const Login = () => {
         console.log("\n\ndata login :: ",data);
         if (data.status) {
           localStorage.setItem('user_id', data.user_id);
-          // navigate('/payment');
+          navigate('/menu');
         }
         else {
           console.log('email or password is incorrect', data.error);

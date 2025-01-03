@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime
 
 def print_statement(*args):
     # logger = logging.getLogger(__name__)

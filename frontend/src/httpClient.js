@@ -3,7 +3,7 @@ import axios from 'axios';
 
 
 
-const PROD_BACK = 'http://20.204.183.209:5000'   //kanish ids
+const PROD_BACK = 'http://74.225.136.45:5000'   //kanish ids
 
 
 const httpClient = axios.create({
