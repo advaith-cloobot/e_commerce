@@ -14,7 +14,7 @@ import traceback
 import datetime
 import traceback
 
-# from db_ops import *
+from db_ops import verify_login,insert_new_user
 # from constants import *
 # from utils import *
 from datetime import datetime
@@ -32,52 +32,32 @@ app.logger.debug("Hello World")
 ENVIRONMENT = "Server"
 
 
-# @app.route("/get_product_list",methods=['POST'])
-# def get_product_list():
-#     try:
-#         product_list = fetch_product_list()
-#         return {"status":True,"product_list":product_list}
-#     except Exception as e:
-#         print('Exception in get_product_list ::',e)
-#         return make_response(jsonify({'error':'Internal error'}), 500)
 
-# @app.route("/add_to_cart",methods=['POST'])
-# def add_to_cart():
-#     try:
-#         print('request.json ::',request.json)
-#         user_id = request.json['user_id']
-#         user_prod_json = request.json['user_prod_json']
-#         user_prod_map_id = upsert_user_prod_map_cart(user_id,user_prod_json)
-#         return {"status":True,"user_prod_map_id":user_prod_map_id}
-#     except Exception as e:
-#         print('Exception in add_to_cart ::',e)
-#         return make_response(jsonify({'error':'Internal error'}), 500)
+
+
+@app.route("/check_login",methods=['POST'])
+def check_login():
+    try:
+        user_email = request.json['user_email']
+        user_password = request.json['user_password']
+        status,user_id = verify_login(user_email,user_password)
+        return {"status":status,"user_id":user_id}
+    except Exception as e:
+        print('Exception in check_login ::',e)
+        return make_response(jsonify({'error':'Internal error'}), 500)
     
 
-# @app.route("/get_cart",methods=['POST'])
-# def get_cart():
-#     try:
-#         user_id = request.json['user_id']
-#         user_prod_map_info = get_rows_by_col(PG_TABLE_IDS_USER_PROD_MAP,pg_col_name_dict[PG_TABLE_IDS_USER_PROD_MAP][1],user_id,opt_conds=pg_col_name_dict[PG_TABLE_IDS_USER_PROD_MAP][5] + " = 1")
-#         if user_prod_map_info:
-#             user_prod_map_id = user_prod_map_info[0][PG_TABLE_IDS_USER_PROD_MAP_user_prod_map_id]
-#             user_prod_json = convert_str_2_json(user_prod_map_info[0][PG_TABLE_IDS_USER_PROD_MAP_user_prod_map_json])
-#             return {"status":True,"user_prod_map_id":user_prod_map_id,"user_prod_json":user_prod_json}
-#         return {"status":True,"user_prod_map_id":None,"user_prod_json":[]}
-#     except Exception as e:
-#         print('Exception in get_cart ::',e)
-#         return make_response(jsonify({'error':'Internal error'}), 500)
-    
-# @app.route("/archive_cart",methods=['POST'])
-# def archive_cart():
-#     try:
-#         user_prod_map_id = request.json['user_prod_map_id']
-#         user_id = request.json['user_id']
-#         archive_user_prod_map(user_prod_map_id,user_id)
-#         return {"status":True}
-#     except Exception as e:
-#         print('Exception in archive_cart ::',e)
-#         return make_response(jsonify({'error':'Internal error'}), 500)
+@app.route("/sign_up_user",methods=['POST'])
+def sign_up_user():
+    try:
+        user_name = request.json['user_name']
+        user_email = request.json['user_email']
+        user_password = request.json['user_password']
+        status,user_id = insert_new_user(user_email,user_password,user_name)
+        return {"status":status,'user_id':user_id}
+    except Exception as e:
+        print('Exception in sign_up_user ::',e)
+        return make_response(jsonify({'error':'Internal error'}), 500)
     
 # @app.route("/get_offer_list",methods=['POST'])
 # def get_offer_list():
